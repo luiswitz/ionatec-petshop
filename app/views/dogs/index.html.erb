@@ -15,32 +15,14 @@
 
 <table>
   <thead>
-    <tr>
-      <th>#</th>
-      <th>Nome</th>
-      <th>Raça</th>
-      <th>Gênero</th>
-      <th>Castrado</th>
-      <th>Nascimento</th>
-      <th>Dono</th>
-      <th>Telefone</th>
-      <th>Última Visita</th>
+    <tr id="dogs-header">
+      <%= render 'dogs_header' %>
     </tr>
   </thead>
   <tbody id="dogs">
-    <% @dogs.each do |dog| %>
-      <tr>
-        <td><%= dog.id %></td>
-        <td><%= dog.name %></td>
-        <td><%= dog.breed.name %></td>
-        <td><%= dog.gender %></td>
-        <td><%= dog.castrated? %></td>
-        <td><%= dog.birthdate %></td>
-        <td><%= dog.owner.name %></td>
-        <td><%= dog.owner.phone %></td>
-      </tr>
-    <% end %>
+    <%= render @dogs %>
   </tbody>
 </table>
-
-<%= paginate @dogs %>
+<div id="paginator">
+  <%= paginate @dogs, remote: true %>
+</div>
