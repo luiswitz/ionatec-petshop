@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+breeds_page = HTTParty.get('http://www.portalfilhotes.com.br/racas-de-a-z/')
+parse_breeds_page = Nokogiri::HTML(breeds_page)
+
+parse_breeds_page.css('#HOTWordsTxt').css('ul').css('li').map do |p|
+  Breed.create(name: p.text)
+end
