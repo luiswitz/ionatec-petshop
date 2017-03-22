@@ -18,6 +18,7 @@ gem 'faker'
 gem 'httparty'
 gem 'nokogiri'
 gem 'ransack'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri
