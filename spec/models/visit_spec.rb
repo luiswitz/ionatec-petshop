@@ -6,7 +6,7 @@ RSpec.describe Visit, type: :model do
       @visit = FactoryGirl.create(:visit, services: [FactoryGirl.create(:service), FactoryGirl.create(:service)])
     end
 
-    it "cannot be valid without a pet" do
+    it "cannot be valid without a dog" do
       @visit.dog = nil
       expect(@visit).to_not be_valid
     end
