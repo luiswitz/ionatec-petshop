@@ -1,17 +1,8 @@
 <h1>Dogs</h1>
 
-<%= search_form_for @search do |f| %>
-  <%= f.label :nome %>
-  <%= f.search_field :name_cont %>
-
-  <%= f.label :raça %>
-  <%= f.search_field :breed_name_cont %>
-
-  <%= f.label :dono %>
-  <%= f.search_field :owner_name_cont %>
-
-  <%= f.submit "Buscar" %>
-<% end %>
+<div id="search-form">
+  <%= render 'search_form' %>
+</div>
 
 <table>
   <thead>

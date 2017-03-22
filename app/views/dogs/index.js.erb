@@ -1,3 +1,4 @@
+$('#search-form').html("<%= escape_javascript render('search_form') %>")
 $('#dogs-header').html("<%= escape_javascript render('dogs_header') %>")
 $('#dogs').html('<%= escape_javascript render(@dogs) %>')
 $('#paginator').html('<%= escape_javascript(paginate(@dogs, remote: true).to_s) %>')
