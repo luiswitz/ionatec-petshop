@@ -1,5 +1,18 @@
 <h1>Dogs</h1>
 
+<%= search_form_for @search do |f| %>
+  <%= f.label :nome %>
+  <%= f.search_field :name_cont %>
+
+  <%= f.label :raça %>
+  <%= f.search_field :breed_name_cont %>
+
+  <%= f.label :dono %>
+  <%= f.search_field :owner_name_cont %>
+
+  <%= f.submit "Buscar" %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -14,7 +27,7 @@
       <th>Última Visita</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="dogs">
     <% @dogs.each do |dog| %>
       <tr>
         <td><%= dog.id %></td>

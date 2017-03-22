@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'httparty'
 gem 'nokogiri'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platform: :mri
