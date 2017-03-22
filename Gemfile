@@ -19,6 +19,7 @@ gem 'httparty'
 gem 'nokogiri'
 gem 'ransack'
 gem 'kaminari'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri

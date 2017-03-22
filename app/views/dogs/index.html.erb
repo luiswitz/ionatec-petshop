@@ -1,19 +1,23 @@
 <h1>Dogs</h1>
-
-<div id="search-form">
-  <%= render 'search_form' %>
+<hr>
+<div class="row">
+  <div id="search-form">
+    <%= render 'search_form' %>
+  </div>
 </div>
 
-<table>
-  <thead>
-    <tr id="dogs-header">
-      <%= render 'dogs_header' %>
-    </tr>
-  </thead>
-  <tbody id="dogs">
-    <%= render @dogs %>
-  </tbody>
-</table>
-<div id="paginator">
-  <%= paginate @dogs, remote: true %>
+<div class="row">
+  <table class="table table-striped table-responsive table-hover">
+    <thead>
+      <tr id="dogs-header">
+        <%= render 'dogs_header' %>
+      </tr>
+    </thead>
+    <tbody id="dogs">
+      <%= render @dogs %>
+    </tbody>
+  </table>
+  <div id="paginator">
+    <%= paginate @dogs, remote: true %>
+  </div>
 </div>

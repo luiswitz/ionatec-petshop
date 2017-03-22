@@ -1,12 +1,19 @@
-<%= search_form_for @search, remote: true do |f| %>
-  <%= f.label :nome %>
-  <%= f.search_field :name_cont %>
+<%= search_form_for @search, class: "form-horizontal", remote: true do |f| %>
+  <div class="form-group">
+    <div class="col-md-3">
+      <%= f.search_field :name_cont, class: 'form-control', placeholder: 'Nome' %>
+    </div>
 
-  <%= f.label :raça %>
-  <%= f.search_field :breed_name_cont %>
+    <div class="col-md-3">
+      <%= f.search_field :breed_name_cont, class: 'form-control', placeholder: 'Raça' %>
+    </div>
 
-  <%= f.label :dono %>
-  <%= f.search_field :owner_name_cont %>
+    <div class="col-md-3">
+      <%= f.search_field :owner_name_cont, class: 'form-control', placeholder: 'Nome do Dono' %>
+    </div>
 
-  <%= f.submit "Buscar" %>
+    <div class="col-md-1">
+      <%= f.submit "Buscar", class: "btn btn-success" %>
+    </div>
+  </div>
 <% end %>
