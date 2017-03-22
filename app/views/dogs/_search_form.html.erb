@@ -1,4 +1,5 @@
 <%= search_form_for @search, class: "form-horizontal", remote: true do |f| %>
+  <%= f.hidden_field :s, value: "#{@search.sorts.first.name} #{@search.sorts.first.dir}" %>
   <div class="form-group">
     <div class="col-md-3">
       <%= f.search_field :name_cont, class: 'form-control', placeholder: 'Nome' %>

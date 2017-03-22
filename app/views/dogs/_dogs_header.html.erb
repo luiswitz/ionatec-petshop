@@ -1,9 +1,9 @@
-<th>#</th>
-<th>Nome</th>
-<th>Raça</th>
-<th>Gênero</th>
-<th>Castrado</th>
-<th>Nascimento</th>
-<th>Dono</th>
-<th>Telefone</th>
-<th>Última Visita</th>
+<th><%= sort_link @search, :id, "#", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :name, "Nome", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :breed_id, "Raça", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :gender, "Gênero", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :castrated, "Castrado", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :birthdate, "Nascimento", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :owner_name, "Dono", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :owner_phone, "Telefone", {}, { remote: true, method: :get } %></th>
+<th><%= sort_link @search, :visits_visited_on, "Última Visita", {}, { remote: true, method: :get } %></th>
