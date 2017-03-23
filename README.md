@@ -9,7 +9,6 @@ Desafio proposto pela empresa Ionatec.
 - Acessar o diretório: `cd ionatec-petshop`
 - Executar o comando `bundle install`
 - Executar o setup do banco de dados: `rake db:setup`
-- Executar o setup do banco de dados teste: `rake db:setup RAILS_ENV=test`
 - Executar os testes: `rspec`
 - Iniciar o servidor `rails s`
 - Acessar a url http://localhost:3000
